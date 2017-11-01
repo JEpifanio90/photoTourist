@@ -1,6 +1,7 @@
-// Spa Demo manifest file
+// Spa Module manifest file
 //= require jquery2
 //= require jquery
+//= require bootstrap
 //= require angular
 //= require angular-ui-router
 //= require angular-resource
