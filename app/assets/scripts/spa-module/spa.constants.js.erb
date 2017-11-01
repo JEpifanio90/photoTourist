@@ -1,0 +1,14 @@
+(function() {
+  "use strict";
+
+  angular
+    .module("spaMod")
+    .constant("APP_CONFIG", {
+      SERVER_URL: "<%= ENV['RAILS_API_URL'] %>",
+
+      MAIN_VIEW: "<%= asset_path('spa-module/pages/main.html') %>",
+
+      CITIES_VIEW: "<%= asset_path('spa-module/cities/cities.html') %>"
+    });
+
+})();

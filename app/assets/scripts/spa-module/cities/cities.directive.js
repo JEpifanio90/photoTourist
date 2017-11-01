@@ -1,14 +1,17 @@
 (function() {
     'use strict';
 
-    angular.module('spaMod').directive('cities', function() {
+    angular.module('spaMod').directive('cities', citiesDirective);
+
+    citiesDirective.$inject = ['APP_CONFIG'];
+    function citiesDirective(APP_CONFIG) {
         return {
-            templateUrl: './cities.html',
+            templateUrl: APP_CONFIG.CITIES_VIEW,
             replace: true,
             bindToController: true,
-            controller: "spa-module.cities.citiesController",
+            controller: "citiesController",
             controllerAs: "citiesCtrl",
             restrict: "E"
           };
-    });
+    }
 })();
