@@ -10,7 +10,5 @@
 //= require spa-module/spa.router
 //= require spa-module/spa.constants
 
-
-
 //= require spa-module/cities/cities.controller
-//= require spa-module/cities/cities.directive
+//= require spa-module/states/states.controller

@@ -5,10 +5,9 @@
     .module("spaMod")
     .constant("APP_CONFIG", {
       SERVER_URL: "<%= ENV['RAILS_API_URL'] %>",
-
-      MAIN_VIEW: "<%= asset_path('spa-module/pages/main.html') %>",
-
-      CITIES_VIEW: "<%= asset_path('spa-module/cities/cities.html') %>"
+      HOME_VIEW: "<%= asset_path('spa-module/home/index.html') %>",
+      CITIES_VIEW: "<%= asset_path('spa-module/cities/cities.html') %>",
+      STATES_VIEW: "<%= asset_path('spa-module/states/states.html') %>"
     });
 
 })();
