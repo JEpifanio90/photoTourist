@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span><%= image_tag("capstone_icon.jpg", :alt => "icon", size: "36x36") %> Capstone</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-links">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-class="{ active: headerCtrl.isActive('/')}"><a ui-sref="home"><span>Home</span></a></li>
+                <li ng-class="{ active: headerCtrl.isActive('/cities')}"><a ui-sref="cities"><span>Cities</span></a></li>
+                <li ng-class="{ active: headerCtrl.isActive('/states')}"><a ui-sref="states"><span>States</span></a></li>
+                <li><a href="https://github.com/JEpifanio90/PhotoTourist" target="_blank"><span><i class="devicon-github-plain-wordmark colored"> Github</i></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

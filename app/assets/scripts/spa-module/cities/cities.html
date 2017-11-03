@@ -1,1 +1,32 @@
-<h2>SOMETHING GOES HERE</h2>
+<div>
+    <h1>Cities Management</h1>
+    <div class="jumbotron row">
+            <div class="col-md-9">
+                <div class="input-group input-group">
+                    <span class="input-group-addon" id="cityName">City's Name:</span>
+                    <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="cityName" ng-model="citiesCtrl.newCityName">
+                </div>
+            </div>   
+            <div class="pull-right col-md-3">
+                <button class="btn btn-primary">Create</button>
+                <button class="btn btn-warning" ng-show="citiesCtrl.showCrudButtons" ng-click="citiesCtrl.updateCity()">Edit</button>
+                <button class="btn btn-danger"  ng-show="citiesCtrl.showCrudButtons">Delete</button>
+            </div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="city in citiesCtrl.cities" ng-click="citiesCtrl.setCity(city)">
+                <td>{{ city.id }}</td>
+                <td>{{ city.name }}</td>
+                <td>{{ city.created_at }}</td>
+                <td>{{ city.updated_at }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

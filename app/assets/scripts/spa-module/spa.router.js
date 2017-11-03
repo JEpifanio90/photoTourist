@@ -7,7 +7,7 @@
     function routerFn($stateProvider, $urlRouterProvider, APP_CONFIG) {
         var citiesState = {
             name: 'cities',
-            url: '/cities/{cityId}',
+            url: '/cities',
             templateUrl: APP_CONFIG.CITIES_VIEW,
             controller: "citiesController",
             controllerAs: "citiesCtrl"
@@ -15,7 +15,7 @@
 
         var statesState = {
             name: 'states',
-            url: '/states/{stateId}',
+            url: '/states',
             templateUrl: APP_CONFIG.STATES_VIEW,
             controller: "statesController",
             controllerAs: "statesCtrl"

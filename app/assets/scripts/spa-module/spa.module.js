@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('spaMod', ['ui.router']);
+    angular.module('spaMod', ['ui.router', 'ngResource']);
 })();
