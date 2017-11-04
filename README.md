@@ -1,24 +1,29 @@
-# README
+# PhotoTourist Module 2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What did I used?
 
-Things you may want to cover:
+* Ruby on rails
 
-* Ruby version
+* Bootstrap 3.x
 
-* System dependencies
+* Bower
 
-* Configuration
+* MongoDb --> ugh
 
-* Database creation
+* Postgresql
 
-* Database initialization
+# How to run
 
-* How to run the test suite
+* Clone the repo
 
-* Services (job queues, cache servers, search engines, etc.)
+* Install all gems: bundle OR bundle install
 
-* Deployment instructions
+* Create the db: rake db:create
 
-* ...
+* Make the migrations: rake db:migrate
+
+* Seed the db: rake db:seed
+
+* That's it! rails s
+
+* Note: Here's a one liner rake db:drop db:create db:migrate db:seed && rails s
