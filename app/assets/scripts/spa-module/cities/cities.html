@@ -1,16 +1,18 @@
+<div class="alert alert-success" role="alert" ng-show="citiesCtrl.showSuccess">Succesfully {{ citiesCtrl.message }}!</div>
+<div class="alert alert-danger" role="alert"  ng-show="citiesCtrl.showFailure">There was an error while {{ citiesCtrl.message }} a city</div>
 <div>
     <h1>Cities Management</h1>
     <div class="jumbotron row">
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-7 col-xs-12">
                 <div class="input-group input-group">
                     <span class="input-group-addon" id="cityName">City's Name:</span>
                     <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="cityName" ng-model="citiesCtrl.newCityName">
                 </div>
             </div>   
-            <div class="pull-right col-md-3">
-                <button class="btn btn-primary">Create</button>
-                <button class="btn btn-warning" ng-show="citiesCtrl.showCrudButtons" ng-click="citiesCtrl.updateCity()">Edit</button>
-                <button class="btn btn-danger"  ng-show="citiesCtrl.showCrudButtons">Delete</button>
+            <div class="pull-right col-md-3 col-sm-5 col-xs-12" style="margin-top: 2em">
+                <button class="btn btn-primary" ng-if="!citiesCtrl.currentCity" ng-click="citiesCtrl.createCity()">Create</button>
+                <button class="btn btn-warning" ng-if="citiesCtrl.currentCity"  ng-click="citiesCtrl.updateCity()">Edit</button>
+                <button class="btn btn-danger"  ng-if="citiesCtrl.currentCity"  ng-click="citiesCtrl.deleteCity()">Delete</button>
             </div>
     </div>
     <table class="table table-hover">
