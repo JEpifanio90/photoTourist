@@ -19,6 +19,10 @@
             entityScope.newEntityName = entity.name;
         };
 
+        entityScope.cancel = function() {
+            resetProperties();
+        };
+
         entityScope.createEntity = function() {
             requestFactory.save({ verb: $stateParams.urlVerb }, { name: entityScope.newEntityName }, function(data, headers) {
                 showGetAndHide(true, $stateParams.create_success);

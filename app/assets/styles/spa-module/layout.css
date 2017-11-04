@@ -3,15 +3,23 @@
     box-shadow: 2px 2px 2px 2px #004953;
   } */
   
-  body .form-group {
+  /* body .form-group {
     padding-top: 10px;
   }
   
   .form-group label {
     padding-right: 10px;
-  }
+  } */
   
-  ul a {
+  #crudOptions > button {
+    margin-right: 0.2em;
+   }
+
+   #crudOptions > button.col-sm-12, #crudOptions > button.col-xs-12 {
+     margin-top: 0.4em;
+   }
+
+  table tbody {
     cursor: pointer;
   }
   
