@@ -8,7 +8,7 @@ What did I used?
 
 * Bower
 
-* MongoDb --> ugh
+* MongoDb --> ugh ![Alt Text](https://1.bp.blogspot.com/-rgJv_zxFlk4/Vgr8KcVoRoI/AAAAAAAAUIU/Jp4zY4Yat6I/s1600/putting-gun-to-head.gif)
 
 * Postgresql
 
