@@ -1,1 +1,34 @@
-<h3>States view</h3>
+<div class="alert alert-success" role="alert" ng-show="statesCtrl.showSuccess">Succesfully {{ statesCtrl.message }}!</div>
+<div class="alert alert-danger" role="alert"  ng-show="statesCtrl.showFailure">There was an error while {{ statesCtrl.message }} a city</div>
+<div>
+    <h1>States Management</h1>
+    <div class="jumbotron row">
+            <div class="col-md-9 col-sm-7 col-xs-12">
+                <div class="input-group input-group">
+                    <span class="input-group-addon" id="stateName">State's Name:</span>
+                    <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="stateName" ng-model="statesCtrl.newStateName">
+                </div>
+            </div>   
+            <div class="pull-right col-md-3 col-sm-5 col-xs-12">
+                <button class="btn btn-primary" ng-if="!statesCtrl.currentState" ng-click="statesCtrl.createState()">Create</button>
+                <button class="btn btn-warning" ng-if="statesCtrl.currentState"  ng-click="statesCtrl.updateState()">Edit</button>
+                <button class="btn btn-danger"  ng-if="statesCtrl.currentState"  ng-click="statesCtrl.deleteState()">Delete</button>
+            </div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="state in statesCtrl.states" ng-click="statesCtrl.setState(state)">
+                <td>{{ state.id }}</td>
+                <td>{{ state.name }}</td>
+                <td>{{ state.created_at }}</td>
+                <td>{{ state.updated_at }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

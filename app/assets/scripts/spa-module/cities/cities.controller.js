@@ -39,7 +39,7 @@
             requestFactory.delete({ verb: 'cities', id: citiesScope.currentCity.id}, function(data, headers) {
                 showGetAndHide(true, 'deleted the city');
             }, function(error) {
-                showGetAndHide(false, 'deleting the city name');
+                showGetAndHide(false, 'deleting the city');
             });
         };
 

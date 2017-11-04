@@ -9,7 +9,7 @@
                     <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="cityName" ng-model="citiesCtrl.newCityName">
                 </div>
             </div>   
-            <div class="pull-right col-md-3 col-sm-5 col-xs-12" style="margin-top: 2em">
+            <div class="pull-right col-md-3 col-sm-5 col-xs-12">
                 <button class="btn btn-primary" ng-if="!citiesCtrl.currentCity" ng-click="citiesCtrl.createCity()">Create</button>
                 <button class="btn btn-warning" ng-if="citiesCtrl.currentCity"  ng-click="citiesCtrl.updateCity()">Edit</button>
                 <button class="btn btn-danger"  ng-if="citiesCtrl.currentCity"  ng-click="citiesCtrl.deleteCity()">Delete</button>
