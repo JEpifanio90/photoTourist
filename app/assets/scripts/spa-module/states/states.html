@@ -6,13 +6,13 @@
             <div class="col-md-9 col-sm-7 col-xs-12">
                 <div class="input-group input-group">
                     <span class="input-group-addon" id="stateName">State's Name:</span>
-                    <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="stateName" ng-model="statesCtrl.newStateName">
+                    <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="stateName" ng-model="statesCtrl.newEntityName">
                 </div>
             </div>   
             <div class="pull-right col-md-3 col-sm-5 col-xs-12">
-                <button class="btn btn-primary" ng-if="!statesCtrl.currentState" ng-click="statesCtrl.createState()">Create</button>
-                <button class="btn btn-warning" ng-if="statesCtrl.currentState"  ng-click="statesCtrl.updateState()">Edit</button>
-                <button class="btn btn-danger"  ng-if="statesCtrl.currentState"  ng-click="statesCtrl.deleteState()">Delete</button>
+                <button class="btn btn-primary" ng-if="!statesCtrl.currentEntity" ng-click="statesCtrl.createEntity()">Create</button>
+                <button class="btn btn-warning" ng-if="statesCtrl.currentEntity"  ng-click="statesCtrl.updateEntity()">Edit</button>
+                <button class="btn btn-danger"  ng-if="statesCtrl.currentEntity"  ng-click="statesCtrl.deleteEntity()">Delete</button>
             </div>
     </div>
     <table class="table table-hover">
@@ -23,8 +23,8 @@
             <th>Updated</th>
         </thead>
         <tbody>
-            <tr ng-repeat="state in statesCtrl.states" ng-click="statesCtrl.setState(state)">
-                <td>{{ state.id }}</td>
+            <tr ng-repeat="state in statesCtrl.entities" ng-click="statesCtrl.setEntity(state)">
+                <td>{{ state._id.$oid }}</td>
                 <td>{{ state.name }}</td>
                 <td>{{ state.created_at }}</td>
                 <td>{{ state.updated_at }}</td>

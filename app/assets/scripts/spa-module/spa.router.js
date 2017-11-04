@@ -9,24 +9,40 @@
             name: 'cities',
             url: '/cities',
             templateUrl: APP_CONFIG.CITIES_VIEW,
-            controller: "citiesController",
-            controllerAs: "citiesCtrl"
+            controller: "entityController",
+            controllerAs: "citiesCtrl",
+            params: {
+                'urlVerb': 'cities', 
+                'create_success': 'created the city', 
+                'create_failure': 'creating the city', 
+                'update_success': 'updated the city\'s name', 
+                'update_failure': 'updating the city\'s name', 
+                'delete_success': 'deleted the state', 
+                'delete_failure': 'deleting the state'
+            }
         };
 
         var statesState = {
             name: 'states',
             url: '/states',
             templateUrl: APP_CONFIG.STATES_VIEW,
-            controller: "statesController",
-            controllerAs: "statesCtrl"
+            controller: "entityController",
+            controllerAs: "statesCtrl",
+            params: {
+                'urlVerb': 'states', 
+                'create_success': 'created the state', 
+                'create_failure': 'creating the state', 
+                'update_success': 'updated the state\'s name', 
+                'update_failure': 'updating the state\'s name', 
+                'delete_success': 'deleted the state', 
+                'delete_failure': 'deleting the state'
+            }
         };
 
         var homeState = {
             name: 'home',
             url: '/',
             templateUrl: APP_CONFIG.HOME_VIEW
-        //     controller: "citiesController",
-        //     controllerAs: "citiesCtrl"
         };
 
         $stateProvider.state(citiesState);

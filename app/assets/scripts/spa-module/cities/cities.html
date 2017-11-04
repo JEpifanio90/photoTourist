@@ -6,13 +6,13 @@
             <div class="col-md-9 col-sm-7 col-xs-12">
                 <div class="input-group input-group">
                     <span class="input-group-addon" id="cityName">City's Name:</span>
-                    <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="cityName" ng-model="citiesCtrl.newCityName">
+                    <input type="text" class="form-control" placeholder="Name goes here" aria-describedby="cityName" ng-model="citiesCtrl.newEntityName">
                 </div>
             </div>   
             <div class="pull-right col-md-3 col-sm-5 col-xs-12">
-                <button class="btn btn-primary" ng-if="!citiesCtrl.currentCity" ng-click="citiesCtrl.createCity()">Create</button>
-                <button class="btn btn-warning" ng-if="citiesCtrl.currentCity"  ng-click="citiesCtrl.updateCity()">Edit</button>
-                <button class="btn btn-danger"  ng-if="citiesCtrl.currentCity"  ng-click="citiesCtrl.deleteCity()">Delete</button>
+                <button class="btn btn-primary" ng-if="!citiesCtrl.currentEntity" ng-click="citiesCtrl.createEntity()">Create</button>
+                <button class="btn btn-warning" ng-if="citiesCtrl.currentEntity"  ng-click="citiesCtrl.updateEntity()">Edit</button>
+                <button class="btn btn-danger"  ng-if="citiesCtrl.currentEntity"  ng-click="citiesCtrl.deleteEntity()">Delete</button>
             </div>
     </div>
     <table class="table table-hover">
@@ -23,7 +23,7 @@
             <th>Updated</th>
         </thead>
         <tbody>
-            <tr ng-repeat="city in citiesCtrl.cities" ng-click="citiesCtrl.setCity(city)">
+            <tr ng-repeat="city in citiesCtrl.entities" ng-click="citiesCtrl.setEntity(city)">
                 <td>{{ city.id }}</td>
                 <td>{{ city.name }}</td>
                 <td>{{ city.created_at }}</td>

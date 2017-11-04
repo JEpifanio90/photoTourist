@@ -12,6 +12,5 @@
 
 //= require spa-module/header/header.directive
 //= require spa-module/services/request.factory
-//= require spa-module/cities/cities.controller
-//= require spa-module/states/states.controller
+//= require spa-module/entity.controller
 //= require spa-module/header/header.controller
